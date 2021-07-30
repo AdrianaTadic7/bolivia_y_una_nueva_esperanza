@@ -312,16 +312,16 @@ sprites.onOverlap(SpriteKind.diablo, SpriteKind.premio_final, function (sprite, 
 sprites.onOverlap(SpriteKind.diablo, SpriteKind.rotacion, function (sprite, otherSprite) {
     número += 1
     if (número == 1) {
-        rotacion.setPosition(100, 0)
+        rotacion2.setPosition(100, 0)
     } else if (número == 2) {
-        rotacion.setPosition(65, 0)
+        rotacion2.setPosition(65, 0)
     } else if (número == 3) {
-        rotacion.setPosition(70, 0)
+        rotacion2.setPosition(70, 0)
     } else if (número == 4) {
-        rotacion.setPosition(75, 0)
+        rotacion2.setPosition(75, 0)
     } else if (número == 5) {
         número += -1
-        rotacion.destroy()
+        rotacion2.destroy()
     }
 })
 sprites.onOverlap(SpriteKind.diablo, SpriteKind.Food, function (sprite, otherSprite) {
@@ -847,7 +847,7 @@ function nivel1 () {
         `, SpriteKind.premio_final)
     paloma.ay = 300
     paloma.setPosition(1300, 0)
-    enemigo = sprites.create(img`
+    enemigo2 = sprites.create(img`
         . . f f f . . . . . . . . f f f 
         . f f c c . . . . . . f c b b c 
         f f c c . . . . . . f c b b c . 
@@ -866,7 +866,7 @@ function nivel1 () {
         . . . f f f f f f f . . . . . . 
         `, SpriteKind.Enemy)
     animation.runImageAnimation(
-    enemigo,
+    enemigo2,
     [img`
         . . f f f . . . . . . . . f f f 
         . f f c c . . . . . . f c b b c 
@@ -939,8 +939,8 @@ function nivel1 () {
     200,
     true
     )
-    enemigo.setPosition(1140, 42)
-    enemigo.setVelocity(-100, 0)
+    enemigo2.setPosition(1140, 42)
+    enemigo2.setVelocity(-100, 0)
     barbijos = sprites.create(img`
         ....................
         ....................
@@ -965,19 +965,19 @@ function nivel1 () {
         `, SpriteKind.Food)
     barbijos.setPosition(350, 0)
     barbijos.ay = 300
-    rotacion = sprites.create(img`
+    rotacion2 = sprites.create(img`
         ....................
         ....................
         ....................
         .......fffffff......
         .....ff.......ff....
         ....f...........f...
-        ....f...........f...
-        ...f.............f..
-        ...f.............f..
-        ...f.............f..
-        ...f.............f..
-        ...f.............f..
+        ..f.f.f.........f...
+        ...fff..............
+        ....f...............
+        .................f..
+        ................fff.
+        ...f...........f.f.f
         ...f.............f..
         ...f.............f..
         ....f...........f...
@@ -987,16 +987,16 @@ function nivel1 () {
         ....................
         ....................
         `, SpriteKind.rotacion)
-    rotacion.setPosition(100, 0)
-    rotacion.ay = 300
+    rotacion2.setPosition(100, 0)
+    rotacion2.ay = 300
     info.setLife(3)
     info.setScore(0)
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    enemigo.destroy()
+    enemigo2.destroy()
     info.changeScoreBy(1)
     animation.runImageAnimation(
-    enemigo,
+    enemigo2,
     [img`
         . . f f f . . . . . . . . f f f 
         . f f c c . . . . . . f c b b c 
@@ -1070,10 +1070,10 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     false
     )
 })
-let enemigo: Sprite = null
+let enemigo2: Sprite = null
 let paloma: Sprite = null
 let barbijos: Sprite = null
-let rotacion: Sprite = null
+let rotacion2: Sprite = null
 let Sebastian_Oruro_Diablada_Sara: Sprite = null
 let projectile: Sprite = null
 let direccion = 0
