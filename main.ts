@@ -321,7 +321,7 @@ sprites.onOverlap(SpriteKind.diablo, SpriteKind.Food, function (sprite, otherSpr
     } else if (barbijos_veces == 2) {
         tiles.placeOnRandomTile(barbijos, assets.tile`myTile50`)
     } else if (barbijos_veces == 3) {
-        tiles.placeOnRandomTile(barbijos, assets.tile`myTile51`)
+        tiles.placeOnRandomTile(barbijos, assets.tile`myTile55`)
     } else if (barbijos_veces == 4) {
         tiles.placeOnRandomTile(barbijos, assets.tile`myTile52`)
     } else {
