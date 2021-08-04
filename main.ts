@@ -588,7 +588,6 @@ sprites.onOverlap(SpriteKind.diablo, SpriteKind.alcohol, function (sprite, other
     }
 })
 function nivel1 () {
-    game.splash("Ayúdanos a salvar Bolivia!")
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -836,6 +835,7 @@ function nivel1 () {
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         `)
+    game.splash("Ayúdanos a salvar Bolivia!")
     tiles.setTilemap(tilemap`level1`)
     effects.clouds.startScreenEffect()
     Sebastian_Oruro_Diablada_Sara = sprites.create(img`
